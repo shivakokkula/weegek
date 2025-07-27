@@ -1,6 +1,6 @@
 import SEO from "../components/SEO";
 import styles from './Services.module.css';
-import { products, serviceIcons } from './productsData';
+import { serviceIcons } from './productsData';
 
 const services = [
   {
