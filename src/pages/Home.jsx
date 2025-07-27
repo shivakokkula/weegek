@@ -1,4 +1,3 @@
-import SEO from "../components/SEO";
 import Contact from "./Contact";
 import Services from "./Services";
 import styles from "./Home.module.css";
@@ -6,12 +5,7 @@ import styles from "./Home.module.css";
 export default function Home() {
   return (
     <>
-      <SEO
-        title="Varcsoft – Crafting Software Solutions"
-        description="Modern, scalable software, AI, and digital solutions for every business need. Web, mobile, cloud, fintech, automation, and more."
-        keywords="software development, SaaS, AI, fintech, web, mobile, cloud, Varcsoft, Mumbai"
-        url="https://Varcsoft.com/"
-      />
+
       {/* HERO SECTION */}
       <section className={styles.hero}>
         <h1 className={styles.heroTitle}>Crafting Software Solutions</h1>

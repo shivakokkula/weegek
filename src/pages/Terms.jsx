@@ -1,7 +1,5 @@
-import SEO from "../components/SEO";
 export default function Terms(){
   return (<>
-    <SEO title="Terms and Conditions – Weegek" description="Read the terms and conditions for using Weegek's services." keywords="Weegek terms" url="https://Weegek.com/terms" />
     <h2>Terms and Conditions</h2>
     <p>Welcome to Weegek. By using our website and services, you agree to these Terms and Conditions:</p>
     <ol>

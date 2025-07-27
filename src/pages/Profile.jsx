@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SEO from "../components/SEO";
+
 
 export default function Profile() {
   // Simulated user state
@@ -11,7 +11,7 @@ export default function Profile() {
 
   return (
     <>
-      <SEO title="My Account" description="View and manage your Weegek account details." keywords="account, profile, user" url="https://Weegek.com/profile" />
+
       <section style={{ maxWidth: 460, margin: "2.5rem auto", background: "#fff", borderRadius: 16, boxShadow: "0 2px 16px rgba(46,196,182,0.09)", padding: "2.2rem 2rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 32 }}>
           <div style={{ width: 64, height: 64, borderRadius: "50%", background: "#e3f6f5", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 32, fontWeight: 700, color: "#2ec4b6" }}>

@@ -1,8 +1,8 @@
-import SEO from "../components/SEO";
+
 export default function About() {
   return (
     <>
-      <SEO title="About Weegek" description="Learn about Weegek, our mission, team, and values." keywords="about Weegek" url="https://Weegek.com/about" />
+
       <section style={{ maxWidth: 900, margin: '2rem auto', padding: '2rem 1rem', background: '#f7fafc', borderRadius: '1rem', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
         <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#2ec4b6', marginBottom: '1rem' }}>About Us</h2>
         <p style={{ fontSize: '1.15rem', color: '#333', marginBottom: '1.5rem' }}>

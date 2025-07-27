@@ -1,4 +1,4 @@
-import SEO from "../components/SEO";
+
 import styles from './Services.module.css';
 import { serviceIcons } from './productsData';
 
@@ -80,7 +80,7 @@ const services = [
 export default function Services() {
   return (
     <>
-      <SEO title="Our Services" description="Explore our range of software services and products." keywords="Weegek services" url="https://Weegek.com/services" />
+
 
       {/* Services Section */}
       <section className={styles.servicesSection}>

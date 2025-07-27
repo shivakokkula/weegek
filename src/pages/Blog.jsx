@@ -1,4 +1,4 @@
-import SEO from "../components/SEO";
+
 import styles from "./Blog.module.css";
 
 export default function Blog() {
@@ -24,7 +24,6 @@ export default function Blog() {
   ];
   return (
     <>
-      <SEO title="Blog & Insights" description="Articles, case studies, and insights from Weegek." keywords="Weegek blog, insights, case studies" url="https://Weegek.com/blog" />
       <section className={styles.blogRoot}>
         <h2 className={styles.blogHeader}>Blog & Insights</h2>
         <div className={styles.blogList}>

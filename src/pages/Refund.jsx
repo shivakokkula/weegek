@@ -1,4 +1,4 @@
-import SEO from "../components/SEO";
+
 export default function Refund(){
   return (<>
     <SEO title="Refund & Cancellation Policy – Weegek" description="Read about our refund and cancellation policy." keywords="Weegek refund policy" url="https://Weegek.com/refund" />

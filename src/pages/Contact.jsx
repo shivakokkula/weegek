@@ -1,4 +1,4 @@
-import SEO from "../components/SEO";
+
 import { useState } from "react";
 import styles from "./Contact.module.css";
 export default function Contact() {
@@ -11,7 +11,7 @@ export default function Contact() {
   };
   return (
     <>
-      <SEO title="Contact Weegek" description="Get in touch with Weegek." keywords="contact Weegek" url="https://Weegek.com/contact" />
+
       <section className={styles.contactSection}>
         <h2 className={styles.contactTitle}>Contact Us</h2>
         <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>

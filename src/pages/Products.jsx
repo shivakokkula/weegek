@@ -1,16 +1,11 @@
-import SEO from "../components/SEO";
+
 import styles from "./Services.module.css";
 import { products } from "./productsData.js";
 
 export default function Products() {
   return (
     <>
-      <SEO
-        title="Our SaaS Products"
-        description="Explore Weegek's SaaS product portfolio."
-        keywords="Weegek products, saas"
-        url="https://Weegek.com/products"
-      />
+
       {/* Our Products Section */}
       <section className={styles.productsSection}>
         <div className={styles.productsHeader}>

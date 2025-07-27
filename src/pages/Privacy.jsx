@@ -1,7 +1,6 @@
-import SEO from "../components/SEO";
+
 export default function Privacy(){
   return (<>
-    <SEO title="Privacy Policy – Weegek" description="Learn how Weegek collects, uses, and protects your data." keywords="Weegek privacy policy" url="https://Weegek.com/privacy" />
     <h2>Privacy Policy</h2>
     <section>
       <h3>Introduction</h3>

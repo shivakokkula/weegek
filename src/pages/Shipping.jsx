@@ -1,4 +1,4 @@
-import SEO from "../components/SEO";
+
 export default function Shipping(){
   return (<>
     <SEO title="Shipping / Delivery Policy – Weegek" description="Learn how we deliver our digital products." keywords="Weegek delivery policy" url="https://Weegek.com/shipping" />

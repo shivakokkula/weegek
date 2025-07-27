@@ -1,4 +1,4 @@
-import SEO from "../components/SEO";
+
 import styles from "./Portfolio.module.css";
 
 export default function Portfolio() {
@@ -27,7 +27,6 @@ export default function Portfolio() {
   ];
   return (
     <>
-      <SEO title="Portfolio" description="Past work and client projects by Weegek." keywords="Weegek portfolio, client work" url="https://Weegek.com/portfolio" />
       <section className={styles.portfolioRoot}>
         <h2 className={styles.portfolioHeader}>Our Portfolio</h2>
         <div className={styles.projectList}>
