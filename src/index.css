@@ -1,0 +1,28 @@
+:root {
+  --color-primary: #3b82f6;
+  --color-secondary: #10b981;
+  --color-bg: #f9fafb;
+  --color-text: #2d3748;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+header, footer {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}

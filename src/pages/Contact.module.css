@@ -1,0 +1,88 @@
+.contactSection {
+  max-width: 700px;
+  margin: 2.5rem auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(46,196,182,0.09);
+  padding: 32px;
+}
+.contactTitle {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-size: 2rem;
+  color: #2ec4b6;
+}
+.contactForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.inputGroup {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+.inputLabel {
+  font-weight: 600;
+  margin-bottom: 2px;
+  display: block;
+}
+.inputField {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e3f6f5;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+.textareaField {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e3f6f5;
+  margin-bottom: 8px;
+  resize: vertical;
+  font-size: 1rem;
+}
+.submitGroup {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-top: 8px;
+}
+.submitBtn {
+  background: linear-gradient(90deg,#2ec4b6 0%,#4f8cff 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 2.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(46,196,182,0.09);
+  transition: background 0.2s;
+}
+@media (max-width: 900px) {
+  .contactSection {
+    padding: 16px;
+  }
+  .contactTitle {
+    font-size: 1.3rem;
+  }
+  .inputGroup, .submitGroup {
+    min-width: 140px;
+  }
+}
+@media (max-width: 600px) {
+  .contactSection {
+    padding: 8px;
+  }
+  .contactForm {
+    gap: 10px;
+  }
+  .contactTitle {
+    font-size: 1.08rem;
+  }
+  .inputField, .textareaField {
+    font-size: 0.95rem;
+  }
+}

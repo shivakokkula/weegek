@@ -1,0 +1,238 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background: linear-gradient(135deg, #4f8cff 0%, #2ec4b6 100%);
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem 2rem 1rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+.heroSubtitle {
+  font-size: 1.15rem;
+  max-width: 640px;
+  margin: 0 auto 1.2rem;
+}
+.heroBtn {
+  display: inline-block;
+  background: #fff;
+  color: #2ec4b6;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transition: background 0.2s, color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.statsBar {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  background: linear-gradient(90deg,#2ec4b6 0%,#4f8cff 100%);
+  border-radius: 16px;
+  color: #fff;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 12px rgba(46,196,182,0.11);
+}
+.statItem {
+  text-align: center;
+}
+.statNumber {
+  font-size: 28px;
+  font-weight: 700;
+}
+.statLabel {
+  font-size: 15px;
+}
+
+.techRow {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  font-size: 16px;
+  color: #4f8cff;
+}
+
+/* WHY CHOOSE US */
+.whySection {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2rem 1rem;
+  background: #f8fafc;
+  border-radius: 1rem;
+  box-shadow: 0 1px 8px rgba(46,196,182,0.07);
+  text-align: center;
+}
+.whyTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #23272f;
+}
+.whyGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem 2rem;
+  justify-content: center;
+}
+.whyItem {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(46,196,182,0.09);
+  padding: 1.1rem 1.6rem;
+  min-width: 150px;
+  max-width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.whyIcon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.whyText {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #23272f;
+}
+
+/* HOW WE WORK */
+.processSection {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2rem 1rem;
+  background: #f8fafc;
+  border-radius: 1rem;
+  box-shadow: 0 1px 8px rgba(46,196,182,0.07);
+}
+.processTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #23272f;
+}
+.processGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 1.5rem;
+  justify-content: center;
+}
+.processStep {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(46,196,182,0.09);
+  padding: 1.1rem 1.6rem;
+  min-width: 150px;
+  max-width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.processIcon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.processStepTitle {
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: #23272f;
+}
+.processStepDesc {
+  font-size: 0.97rem;
+  color: #888;
+  margin-bottom: 0.1rem;
+}
+
+/* HERO OVERLAY (optional for contrast) */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,rgba(35,39,47,0.22) 0%,rgba(46,196,182,0.13) 100%);
+  border-radius: 1rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .statsBar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 1rem 0.5rem;
+  }
+  .techRow {
+    gap: 8px;
+    font-size: 14px;
+  }
+  .whyGrid, .processGrid {
+    gap: 1.2rem 0.7rem;
+  }
+  .whyItem, .processStep {
+    min-width: 120px;
+    max-width: 170px;
+    padding: 0.7rem 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTitle {
+    font-size: 1.6rem;
+  }
+  .hero {
+    padding: 1.5rem 0.3rem;
+  }
+  .statsBar {
+    font-size: 13px;
+    padding: 0.7rem 0.2rem;
+  }
+  .whySection, .processSection {
+    padding: 1.1rem 0.2rem;
+  }
+  .whyTitle, .processTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .statsBar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 1rem 0.5rem;
+  }
+  .techRow {
+    gap: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTitle {
+    font-size: 1.6rem;
+  }
+  .hero {
+    padding: 1.5rem 0.3rem;
+  }
+  .statsBar {
+    font-size: 13px;
+    padding: 0.7rem 0.2rem;
+  }
+}

@@ -1,0 +1,137 @@
+.loginRoot {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #e3f6f5 60%, #f7fafc 100%);
+}
+.loginCard {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(46,196,182,0.09);
+  padding: 2.5rem 2rem;
+  min-width: 320px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2ec4b6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.loginForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.inputLabel {
+  font-weight: 600;
+  margin-bottom: 2px;
+  display: block;
+}
+.inputField {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e3f6f5;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+.loginBtn {
+  background: linear-gradient(90deg,#2ec4b6 0%,#4f8cff 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 2.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(46,196,182,0.09);
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+.errorMsg {
+  color: #ff3b3b;
+  background: #fff0f0;
+  border: 1.5px solid #ffbdbd;
+  font-weight: 700;
+  border-radius: 8px;
+  margin: 0.8rem 0 0.5rem 0;
+  text-align: center;
+  font-size: 1.02rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  justify-content: center;
+  padding: 0.5em 0.7em;
+}
+.passwordFieldWrapper {
+  position: relative;
+  margin-bottom: 18px;
+}
+.showPasswordBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+  color: #4f8cff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0 2px;
+}
+.formLinksRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  margin-top: 1.1em;
+  font-size: 0.97rem;
+}
+.forgotLink, .registerLink {
+  color: #4f8cff;
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+.divider {
+  color: #bfc9d1;
+  user-select: none;
+}
+.socialDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2em 0 0.1em 0;
+  color: #bfc9d1;
+  font-size: 0.95rem;
+}
+.socialDivider span {
+  background: #fff;
+  padding: 0 0.8em;
+  border-radius: 1em;
+  font-weight: 600;
+}
+.loginBtnLoading {
+  background: #b2f1e8 !important;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+@media (max-width: 600px) {
+  .loginCard {
+    padding: 1.2rem 0.6rem;
+    min-width: 0;
+  }
+  .loginTitle {
+    font-size: 1.2rem;
+  }
+}
