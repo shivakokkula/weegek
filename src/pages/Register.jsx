@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../auth/AuthContext";
 import { useNavigate } from "react-router-dom";
-import SEO from "../components/SEO";
 import styles from "./Register.module.css";
 
 export default function Register() {
@@ -54,7 +53,6 @@ export default function Register() {
 
   return (
     <>
-      <SEO title="Register" description="Register a new Weegek account." url="https://Weegek.com/register" />
       <div className={styles.registerRoot}>
         <form onSubmit={handleSubmit} className={styles.registerCard} aria-label="Registration form">
           <div className={styles.registerTitle}>Register</div>

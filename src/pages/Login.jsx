@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../auth/AuthContext";
 import { useNavigate } from "react-router-dom";
-import SEO from "../components/SEO";
 import styles from "./Login.module.css";
 
 export default function Login() {
@@ -41,7 +40,6 @@ export default function Login() {
 
   return (
     <>
-      <SEO title="Login" description="Login to your Weegek account." url="https://Weegek.com/login" />
       <div className={styles.loginRoot}>
         <form onSubmit={handleSubmit} className={styles.loginCard} aria-label="Login form">
           <div className={styles.loginTitle}>Login</div>
