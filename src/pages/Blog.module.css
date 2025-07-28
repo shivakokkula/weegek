@@ -1,0 +1,67 @@
+.blogRoot {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(120deg, #e3f6f5 60%, #f7fafc 100%);
+  padding: 2.5rem 0 2rem 0;
+}
+.blogHeader {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #2ec4b6;
+  margin-bottom: 1.2rem;
+  letter-spacing: -1px;
+  text-align: center;
+}
+.blogList {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.blogCard {
+  background: #fff;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 16px rgba(46,196,182,0.09);
+  padding: 2rem 1.5rem;
+  width: 100%;
+}
+.blogTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #4f8cff;
+  margin-bottom: 0.5rem;
+}
+.blogMeta {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 0.7rem;
+}
+.blogExcerpt {
+  font-size: 1.08rem;
+  color: #222;
+  margin-bottom: 0.7rem;
+}
+@media (max-width: 900px) {
+  .blogHeader {
+    font-size: 1.5rem;
+  }
+  .blogCard {
+    padding: 1.1rem 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .blogRoot {
+    padding: 1.2rem 0 1rem 0;
+  }
+  .blogHeader {
+    font-size: 1.1rem;
+  }
+  .blogCard {
+    padding: 0.7rem 0.2rem;
+  }
+}

@@ -1,0 +1,205 @@
+.servicesSection {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 1rem;
+  background: linear-gradient(120deg, #f7fafc 60%, #e3f6f5 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px rgba(46,196,182,0.09);
+}
+
+.visionHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.visionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2ec4b6;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.visionDesc {
+  font-size: 1.22rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 0.4rem auto;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.2rem;
+  justify-content: center;
+}
+
+.serviceCard {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(36, 42, 66, 0.07);
+  padding: 2.2rem 1.5rem 1.7rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 340px;
+  border: 2.5px solid #e3f6f5;
+  position: relative;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 6px 28px rgba(46,196,182,0.11);
+  border: 2.5px solid #2ec4b6;
+}
+
+.serviceIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+  color: #4f8cff;
+}
+
+.serviceTitle {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #2ec4b6;
+  margin-bottom: 2px;
+}
+
+.serviceSubtitle {
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 0.7rem;
+}
+
+.featureList {
+  padding-left: 1.1rem;
+  margin: 0 0 1.1rem 0;
+  color: #222;
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.featureItem {
+  margin-bottom: 2px;
+  list-style: '✦ ';
+}
+
+.learnMore {
+  margin-top: auto;
+  background: linear-gradient(90deg, #4f8cff 0%, #2ec4b6 100%);
+  color: #fff;
+  padding: 0.55rem 1.45rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(46,196,182,0.12);
+  transition: background 0.2s;
+  letter-spacing: 0.01em;
+  display: inline-block;
+}
+
+.learnMore:hover {
+  background: #2ec4b6;
+}
+
+.productsSection {
+  max-width: 1100px;
+  margin: 0 auto 2.5rem auto;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  background: linear-gradient(120deg, #e3f6f5 70%, #f7fafc 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 18px rgba(36, 42, 66, 0.10);
+}
+
+.productsHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.productsTitle {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #4f8cff;
+  margin-bottom: 0.3rem;
+  letter-spacing: -1px;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.productCard {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 14px rgba(79,140,255,0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 260px;
+  border: 2px solid #e3f6f5;
+  position: relative;
+  transition: box-shadow 0.18s, border 0.18s, transform 0.22s cubic-bezier(.22,1,.36,1);
+  will-change: transform, box-shadow;
+}
+
+.productCard:hover {
+  box-shadow: 0 10px 32px rgba(46,196,182,0.18), 0 2px 18px rgba(79,140,255,0.11);
+  border: 2px solid #4f8cff;
+  transform: scale(1.045) translateY(-4px);
+  z-index: 2;
+}
+
+.productCard:hover {
+  box-shadow: 0 6px 24px rgba(79,140,255,0.13);
+  border: 2px solid #4f8cff;
+}
+
+.productLogo {
+  width: 56px;
+  height: 56px;
+  border-radius: 1rem;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+  background: #f0f4f8;
+}
+
+.productName {
+  font-weight: 700;
+  font-size: 1.18rem;
+  color: #2ec4b6;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.productDesc {
+  font-weight: 500;
+  font-size: 1.01rem;
+  color: #444;
+  margin-bottom: 0.9rem;
+  text-align: center;
+}
+
+.productLink {
+  background: linear-gradient(90deg, #4f8cff 0%, #2ec4b6 100%);
+  color: #fff;
+  padding: 0.45rem 1.2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(46,196,182,0.12);
+  transition: background 0.2s;
+  letter-spacing: 0.01em;
+  display: inline-block;
+}
+
+.productLink:hover {
+  background: #4f8cff;
+}
