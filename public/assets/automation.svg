@@ -1,0 +1,6 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="30" cy="30" r="30" fill="#e3f6f5"/>
+  <rect x="20" y="25" width="20" height="10" rx="5" fill="#2ec4b6"/>
+  <circle cx="30" cy="30" r="4" fill="#fff"/>
+  <text x="30" y="55" text-anchor="middle" font-size="8" fill="#bbb">automation</text>
+</svg>

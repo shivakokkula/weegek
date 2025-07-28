@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useAuth } from "../auth/AuthContext";
+// import { useAuth } from "../auth/AuthContext";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 
 export default function Login() {
-  const { login } = useAuth();
+  // const { login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);

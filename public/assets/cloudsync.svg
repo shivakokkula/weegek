@@ -1,0 +1,7 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="30" cy="30" r="30" fill="#e3f6f5"/>
+  <ellipse cx="30" cy="38" rx="14" ry="8" fill="#2ec4b6"/>
+  <ellipse cx="24" cy="32" rx="6" ry="4" fill="#4f8cff"/>
+  <ellipse cx="36" cy="32" rx="6" ry="4" fill="#4f8cff"/>
+  <text x="30" y="55" text-anchor="middle" font-size="8" fill="#bbb">cloudsync</text>
+</svg>

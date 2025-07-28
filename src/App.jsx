@@ -8,7 +8,6 @@ import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Refund from "./pages/Refund";
-import Shipping from "./pages/Shipping";
 import Products from "./pages/Products";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -31,7 +30,6 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/refund" element={<Refund />} />
-              <Route path="/shipping" element={<Shipping />} />
               {/* Auth routes */}
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
