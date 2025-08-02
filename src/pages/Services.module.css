@@ -1,108 +1,130 @@
 .servicesSection {
-  max-width: 1100px;
-  margin: 2.5rem auto;
-  padding: 2.5rem 1rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
   background: linear-gradient(120deg, #f7fafc 60%, #e3f6f5 100%);
-  border-radius: 1.2rem;
-  box-shadow: 0 4px 32px rgba(46,196,182,0.09);
 }
 
 .visionHeader {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
 }
 
 .visionTitle {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 800;
   color: #2ec4b6;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   letter-spacing: -1px;
+  line-height: 1.2;
 }
 
 .visionDesc {
-  font-size: 1.22rem;
+  font-size: 1.3rem;
   color: #444;
-  max-width: 700px;
-  margin: 0 auto 0.4rem auto;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
 }
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.2rem;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .serviceCard {
   background: #fff;
   border-radius: 1rem;
-  box-shadow: 0 2px 16px rgba(36, 42, 66, 0.07);
-  padding: 2.2rem 1.5rem 1.7rem 1.5rem;
+  box-shadow: 0 4px 24px rgba(36, 42, 66, 0.1);
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 340px;
+  min-height: 360px;
   border: 2.5px solid #e3f6f5;
   position: relative;
-  transition: box-shadow 0.18s, border 0.18s;
+  transition: all 0.3s ease;
 }
 
 .serviceCard:hover {
-  box-shadow: 0 6px 28px rgba(46,196,182,0.11);
-  border: 2.5px solid #2ec4b6;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(36, 42, 66, 0.15);
 }
 
 .serviceIcon {
-  font-size: 2.5rem;
-  margin-bottom: 0.7rem;
-  color: #4f8cff;
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #2ec4b6;
 }
 
 .serviceTitle {
+  font-size: 1.6rem;
   font-weight: 700;
-  font-size: 1.25rem;
-  color: #2ec4b6;
-  margin-bottom: 2px;
+  margin-bottom: 1rem;
+  color: #2d3748;
 }
 
 .serviceSubtitle {
-  font-weight: 500;
-  font-size: 1.05rem;
-  color: #444;
-  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
 }
 
-.featureList {
-  padding-left: 1.1rem;
-  margin: 0 0 1.1rem 0;
-  color: #222;
-  font-size: 1.03rem;
-  line-height: 1.7;
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  width: 100%;
 }
 
 .featureItem {
-  margin-bottom: 2px;
-  list-style: '✦ ';
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #4a5568;
 }
 
-.learnMore {
-  margin-top: auto;
-  background: linear-gradient(90deg, #4f8cff 0%, #2ec4b6 100%);
-  color: #fff;
-  padding: 0.55rem 1.45rem;
-  border-radius: 2rem;
+.featureItem:before {
+  content: '✓';
+  color: #2ec4b6;
+  font-weight: bold;
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.learnMoreLink {
+  display: inline-flex;
+  align-items: center;
+  color: #2ec4b6;
   font-weight: 600;
-  font-size: 1.05rem;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(46,196,182,0.12);
-  transition: background 0.2s;
-  letter-spacing: 0.01em;
-  display: inline-block;
+  margin-top: auto;
+  transition: all 0.2s ease;
 }
 
-.learnMore:hover {
-  background: #2ec4b6;
+.learnMoreLink:hover {
+  color: #24a79d;
+}
+
+.learnMoreLink svg {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.learnMoreLink:hover svg {
+  transform: translateX(4px);
 }
 
 .productsSection {
@@ -202,4 +224,55 @@
 
 .productLink:hover {
   background: #4f8cff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .servicesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 3rem 1rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    padding: 0 1.5rem;
+  }
+  
+  .visionTitle {
+    font-size: 2.2rem;
+  }
+  
+  .visionDesc {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .visionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .visionDesc {
+    font-size: 1.05rem;
+  }
+  
+  .serviceCard {
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+  
+  .serviceTitle {
+    font-size: 1.4rem;
+  }
+  
+  .serviceSubtitle {
+    font-size: 1rem;
+  }
 }
