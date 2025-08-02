@@ -1,5 +1,6 @@
-import { Link, useLocation } from "react-router-dom";
-import { useAuth } from "../auth/AuthContext";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Cookies from 'js-cookie';
+import { useEffect, useState } from 'react';
 import styles from "./Header.module.css";
 
 const navLinks = [
@@ -13,7 +14,20 @@ const navLinks = [
 
 export default function Header() {
   const location = useLocation();
-  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Check if user is logged in by checking for the JWT token
+    const token = Cookies.get('jwtToken');
+    setIsLoggedIn(!!token);
+  }, [location]); // Re-run when location changes
+
+  const handleLogout = () => {
+    Cookies.remove('jwtToken');
+    setIsLoggedIn(false);
+    navigate('/login');
+  };
 
   return (
     <header className={styles.headerRoot}>
@@ -42,10 +56,18 @@ export default function Header() {
               );
             })}
           </nav>
-          {user ? (
-            <Link to="/profile" className={styles.profileIcon} title="My Account">
-              <span role="img" aria-label="profile">👤</span>
-            </Link>
+          {isLoggedIn ? (
+            <>
+              <Link to="/profile" className={styles.profileIcon} title="My Account">
+                <span role="img" aria-label="profile">👤</span>
+              </Link>
+              <button
+                className={styles.logoutBtn}
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            </>
           ) : (
             <Link to="/login" className={styles.loginBtn}>Login</Link>
           )}

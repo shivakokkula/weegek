@@ -1,98 +1,116 @@
-import { useState } from "react";
-// import { useAuth } from "../auth/AuthContext";
-import { useNavigate } from "react-router-dom";
-import styles from "./Login.module.css";
+// src/components/Login.js
+import React, { useState } from "react";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import { GoogleLogin } from "@react-oauth/google";
+import Cookies from "js-cookie";
+import constants from "../auth/constants";
+import "./Login.css";
 
-export default function Login() {
-  // const { login } = useAuth();
+const SERVER_URL = constants.SERVER_URL;
+
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const validateEmail = (email) => {
-    // Simple email regex
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
-
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    if (!validateEmail(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-    setLoading(true);
     try {
-    //   await login(email, password);
+      const response = await axios.post(
+        `${SERVER_URL}/login`,
+        new URLSearchParams({
+          username: email,
+          password: password,
+        }).toString(),
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      );
+      const token = response.data.access_token;
+      Cookies.set("jwtToken", token);
+      // Redirect to home page after successful login
       navigate("/");
     } catch (err) {
-      setError(
-        err?.response?.data?.message ||
-        (err?.message?.toLowerCase().includes("network") ? "Network error. Please try again." : "Invalid credentials")
-      );
-    } finally {
-      setLoading(false);
+      setError(err.response?.data?.detail || "Login failed");
     }
+  };
+
+  const handleGoogleSuccess = async (credentialResponse) => {
+    try {
+      const response = await axios.post(
+        `${SERVER_URL}/google-login`,
+        {
+          token_id: credentialResponse.credential,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const token = response.data.access_token;
+      Cookies.set("jwtToken", token);
+      // Redirect to home page after successful Google login
+      navigate("/");
+    } catch (err) {
+      setError(err.response?.data?.detail || "Google login failed");
+    }
+  };
+
+  const handleGoogleFailure = () => {
+    setError("Google login failed");
   };
 
   return (
-    <>
-      <div className={styles.loginRoot}>
-        <form onSubmit={handleSubmit} className={styles.loginCard} aria-label="Login form">
-          <div className={styles.loginTitle}>Login</div>
-          {error && <div className={styles.errorMsg} role="alert">❌ {error}</div>}
-          <label htmlFor="login-email" className={styles.inputLabel}>Email</label>
+    <div className="login-container">
+      <h2>Login</h2>
+      {error && (
+        <p style={{ color: "red" }}>
+          {typeof error === "string"
+            ? error
+            : error.msg || JSON.stringify(error)}
+        </p>
+      )}
+
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Email:</label>
           <input
-            id="login-email"
             type="email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="your@email.com"
+            onChange={(e) => setEmail(e.target.value)}
             required
-            autoComplete="email"
-            className={styles.inputField}
           />
-          <label htmlFor="login-password" className={styles.inputLabel}>Password</label>
-          <div className={styles.passwordFieldWrapper}>
-            <input
-              id="login-password"
-              type={showPassword ? "text" : "password"}
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              placeholder="Password"
-              required
-              autoComplete="current-password"
-              className={styles.inputField}
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(v => !v)}
-              aria-label={showPassword ? "Hide password" : "Show password"}
-              className={styles.showPasswordBtn}
-            >
-              {showPassword ? "Hide" : "Show"}
-            </button>
-          </div>
-          <button
-            type="submit"
-            disabled={loading}
-            className={styles.loginBtn + (loading ? ' ' + styles.loginBtnLoading : '')}
-            aria-busy={loading}
-          >
-            {loading ? <span>⏳ Logging in...</span> : "Login"}
-          </button>
-          <div className={styles.formLinksRow}>
-            <a href="/forgot-password" className={styles.forgotLink}>Forgot password?</a>
-            <span className={styles.divider}>|</span>
-            Don&apos;t have an account? <a href="/register" className={styles.registerLink}>Register</a>
-          </div>
-          <div className={styles.socialDivider}><span>OR</span></div>
-        </form>
-      </div>
-    </>
-  );
-}
+        </div>
+        <div>
+          <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
 
+      <div className="google-login-btn">
+        <GoogleLogin
+          onSuccess={handleGoogleSuccess}
+          onError={handleGoogleFailure}
+        />
+      </div>
+      
+      <p>
+        Don't have an account? <Link to="/register">Register here</Link>
+      </p>
+    </div>
+  );
+};
+
+export default Login;

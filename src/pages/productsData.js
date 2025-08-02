@@ -1,21 +1,21 @@
 // Example SaaS products for Weegek
 export const products = [
-  {
-    name: "Weegek AI Desk",
-    desc: "AI-powered virtual assistant platform for automating customer support and business workflows.",
-    logo: "/assets/ai-desk.svg",
-    url: "https://ai-desk.Weegek.com"
-  },
-  {
-    name: "SmartForms Cloud",
-    desc: "No-code form builder with advanced analytics, integrations, and workflow automation.",
-    logo: "/assets/smartforms.svg",
-    url: "https://smartforms.Weegek.com"
-  },
+  // {
+  //   name: "Weegek AI Desk",
+  //   desc: "AI-powered virtual assistant platform for automating customer support and business workflows.",
+  //   logo: "/assets/ai-desk.svg",
+  //   url: "https://ai-desk.Weegek.com"
+  // },
+  // {
+  //   name: "SmartForms Cloud",
+  //   desc: "No-code form builder with advanced analytics, integrations, and workflow automation.",
+  //   logo: "/assets/smartforms.svg",
+  //   url: "https://smartforms.Weegek.com"
+  // },
   {
     name: "AI Quiz Generator",
     desc: "Create interactive quizzes with AI-powered question generation and analytics.",
-    logo: "/assets/ai-quiz.svg",
+    logo: "/assets/quizoq.svg",
     url: "https://quizoq.netlify.app"
   },
   {
@@ -24,18 +24,12 @@ export const products = [
     logo: "/assets/analytics.svg",
     url: "https://insight360.Weegek.com"
   },
-  {
-    name: "AutoFlow Automation",
-    desc: "Workflow automation suite for repetitive business processes, with drag-and-drop builder.",
-    logo: "/assets/automation.svg",
-    url: "https://autoflow.Weegek.com"
-  },
-  {
-    name: "CloudSync Drive",
-    desc: "Secure cloud storage and team collaboration platform with AI-powered search and sharing.",
-    logo: "/assets/cloudsync.svg",
-    url: "https://cloudsync.Weegek.com"
-  }
+  // {
+  //   name: "CloudSync Drive",
+  //   desc: "Secure cloud storage and team collaboration platform with AI-powered search and sharing.",
+  //   logo: "/assets/cloudsync.svg",
+  //   url: "https://cloudsync.Weegek.com"
+  // }
 ];
 
 // SVG icons for services (replace emoji with SVG imports in Services page)
