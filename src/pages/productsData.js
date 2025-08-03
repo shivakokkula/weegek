@@ -4,66 +4,73 @@ export const products = [
     id: 1,
     name: "QuizMaster Pro",
     desc: "Create, manage, and analyze interactive quizzes with our AI-powered assessment platform. Perfect for educators and trainers.",
-    url: "https://quizmaster-pro.weegen.com",
+    url: "https://quizoq.netlify.app",
     iconType: "quiz",
     category: "Education"
   },
   {
     id: 2,
-    name: "EmailFlow",
-    desc: "Automate your email marketing campaigns with our intuitive platform. Design, schedule, and track performance in one place.",
-    url: "https://emailflow.weegen.com",
-    iconType: "email",
-    category: "Marketing"
-  },
-  {
-    id: 3,
-    name: "Analytics360",
-    desc: "Comprehensive business intelligence dashboard with real-time data visualization and custom reporting tools.",
-    url: "https://analytics360.weegen.com",
-    iconType: "analytics",
-    category: "Analytics"
-  },
-  {
-    id: 4,
-    name: "TaskFlow",
-    desc: "Streamline team collaboration with our project management solution. Track tasks, deadlines, and team productivity.",
-    url: "https://taskflow.weegen.com",
-    iconType: "productivity",
+    name: "Chatgpt Prompt Templates",
+    url: "/assets/chatgpt_prompts.pdf",
+    iconType: "ai",
     category: "Productivity"
-  },
-  {
-    id: 5,
-    name: "CloudSecure",
-    desc: "Enterprise-grade security solution to protect your cloud infrastructure and sensitive business data.",
-    url: "https://cloudsecure.weegen.com",
-    iconType: "security",
-    category: "Security"
-  },
-  {
-    id: 6,
-    name: "DataInsight",
-    desc: "Transform raw data into actionable insights with our advanced data visualization and analysis tools.",
-    url: "https://datainsight.weegen.com",
-    iconType: "chart",
-    category: "Analytics"
-  },
-  {
-    id: 7,
-    name: "ChatConnect",
-    desc: "Seamless team communication platform with channels, direct messaging, and file sharing capabilities.",
-    url: "https://chatconnect.weegen.com",
-    iconType: "chat",
-    category: "Communication"
-  },
-  {
-    id: 8,
-    name: "StoragePro",
-    desc: "Secure and scalable cloud storage solution with advanced sharing and collaboration features.",
-    url: "https://storagepro.weegen.com",
-    iconType: "storage",
-    category: "Storage"
   }
+  // {
+  //   id: 2,
+  //   name: "EmailFlow",
+  //   desc: "Automate your email marketing campaigns with our intuitive platform. Design, schedule, and track performance in one place.",
+  //   url: "https://emailflow.weegen.com",
+  //   iconType: "email",
+  //   category: "Marketing"
+  // },
+  // {
+  //   id: 3,
+  //   name: "Analytics360",
+  //   desc: "Comprehensive business intelligence dashboard with real-time data visualization and custom reporting tools.",
+  //   url: "https://analytics360.weegen.com",
+  //   iconType: "analytics",
+  //   category: "Analytics"
+  // },
+  // {
+  //   id: 4,
+  //   name: "TaskFlow",
+  //   desc: "Streamline team collaboration with our project management solution. Track tasks, deadlines, and team productivity.",
+  //   url: "https://taskflow.weegen.com",
+  //   iconType: "productivity",
+  //   category: "Productivity"
+  // },
+  // {
+  //   id: 5,
+  //   name: "CloudSecure",
+  //   desc: "Enterprise-grade security solution to protect your cloud infrastructure and sensitive business data.",
+  //   url: "https://cloudsecure.weegen.com",
+  //   iconType: "security",
+  //   category: "Security"
+  // },
+  // {
+  //   id: 6,
+  //   name: "DataInsight",
+  //   desc: "Transform raw data into actionable insights with our advanced data visualization and analysis tools.",
+  //   url: "https://datainsight.weegen.com",
+  //   iconType: "chart",
+  //   category: "Analytics"
+  // },
+  // {
+  //   id: 7,
+  //   name: "ChatConnect",
+  //   desc: "Seamless team communication platform with channels, direct messaging, and file sharing capabilities.",
+  //   url: "https://chatconnect.weegen.com",
+  //   iconType: "chat",
+  //   category: "Communication"
+  // },
+  // {
+  //   id: 8,
+  //   name: "StoragePro",
+  //   desc: "Secure and scalable cloud storage solution with advanced sharing and collaboration features.",
+  //   url: "https://storagepro.weegen.com",
+  //   iconType: "storage",
+  //   category: "Storage"
+  // }
 ];
 
 // Helper function to get products by category
