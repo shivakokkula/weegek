@@ -19,28 +19,17 @@ export default function About() {
           </div>
         </div>
         <div style={{ marginBottom: '2rem' }}>
-          <h3 style={{ color: '#4f8cff', marginBottom: 8 }}>Our Team</h3>
+          <h3 style={{ color: '#4f8cff', marginBottom: 8 }}>Our Founder</h3>
           <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
             <div style={{ textAlign: 'center', flex: 1, minWidth: 150 }}>
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="CEO" style={{ width: 72, height: 72, borderRadius: '50%', marginBottom: 8 }} />
-              <div style={{ fontWeight: 600 }}>Rajesh Kumar</div>
-              <div style={{ color: '#888' }}>Founder & CEO</div>
-            </div>
-            <div style={{ textAlign: 'center', flex: 1, minWidth: 150 }}>
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="CTO" style={{ width: 72, height: 72, borderRadius: '50%', marginBottom: 8 }} />
-              <div style={{ fontWeight: 600 }}>Priya Sharma</div>
-              <div style={{ color: '#888' }}>CTO</div>
-            </div>
-            <div style={{ textAlign: 'center', flex: 1, minWidth: 150 }}>
-              <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Product Lead" style={{ width: 72, height: 72, borderRadius: '50%', marginBottom: 8 }} />
-              <div style={{ fontWeight: 600 }}>Amit Patel</div>
-              <div style={{ color: '#888' }}>Product Lead</div>
+              <img src="https://ui-avatars.com/api/?name=Shivakumar+Kokkula&background=2ec4b6&color=fff&size=128" alt="Founder" style={{ width: 72, height: 72, borderRadius: '50%', marginBottom: 8 }} />
+              <div style={{ fontWeight: 600 }}>Shivakumar Kokkula</div>
+              <div style={{ color: '#888' }}>Founder</div>
             </div>
           </div>
         </div>
         <div style={{ fontSize: '1rem', color: '#444', background: '#e3f6f5', padding: '1rem', borderRadius: '0.5rem' }}>
-          <strong>Registered Office:</strong> 123 Business Park, Hyderabad, India.<br />
-          <strong>Company Registration:</strong> CIN: U12345TG2020PTC123456
+          <strong>Registered Office:</strong> Worli, Mumbai, India<br />
         </div>
       </section>
     </>

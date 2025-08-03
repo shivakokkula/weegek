@@ -17,13 +17,13 @@ export default function Contact() {
         <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
           <div className={styles.inputGroup}>
             <div style={{ marginBottom: '1.2rem' }}>
-              <strong>Email:</strong> <a href="mailto:contact@Weegek.com" style={{ color: '#2ec4b6', textDecoration: 'none' }}>contact@Weegek.com</a>
+              <strong>Email:</strong> <a href="mailto:kokkulashivakumar1@gmail.com" style={{ color: '#2ec4b6', textDecoration: 'none' }}>kokkulashivakumar1@gmail.com</a>
             </div>
             <div style={{ marginBottom: '1.2rem' }}>
-              <strong>Phone:</strong> <a href="tel:+919876543210" style={{ color: '#2ec4b6', textDecoration: 'none' }}>+91-9876543210</a>
+              <strong>Phone:</strong> <a href="tel:+91843367331" style={{ color: '#2ec4b6', textDecoration: 'none' }}>+91 843367331</a>
             </div>
             <div style={{ marginBottom: '1.2rem' }}>
-              <strong>Address:</strong><br />123 Business Park, Hyderabad, India
+              <strong>Address:</strong><br />Worli, Mumbai, India
             </div>
           </div>
           <div className={styles.inputGroup} style={{ flex: 2, minWidth: 260 }}>

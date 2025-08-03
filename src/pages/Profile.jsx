@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import axios from 'axios';
 import styles from './Profile.module.css';
+import config from '../auth/constants';
 
 const Profile = () => {
   const [user, setUser] = useState({
@@ -11,27 +13,39 @@ const Profile = () => {
     avatar: 'https://ui-avatars.com/api/?name=Guest+User&background=2ec4b6&color=fff&size=128',
     loggedIn: false
   });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch user data if logged in
     const fetchUserData = async () => {
       const token = Cookies.get('jwtToken');
-      if (token) {
-        try {
-          // Replace with your actual API endpoint
-          // const response = await axios.get(`${constants.BASE_URL}/api/user`, {
-          //   headers: { Authorization: `Bearer ${token}` }
-          // });
-          // setUser({
-          //   ...response.data,
-          //   avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(response.data.name)}&background=2ec4b6&color=fff&size=128`
-          // });
-          setUser((prevUser) => ({ ...prevUser, loggedIn: true }));
-        } catch (error) {
-          console.error('Error fetching user data:', error);
+      if (!token) {
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const response = await axios.get(`${config.SERVER_URL}/user/profile`, {
+          headers: { 
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (response.data) {
+          setUser({
+            ...response.data,
+            loggedIn: true,
+            avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(response.data.name || 'User')}&background=2ec4b6&color=fff&size=128`
+          });
         }
+      } catch (error) {
+        console.error('Error fetching user profile:', error);
+        setError('Failed to load profile. Please try again.');
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -46,10 +60,9 @@ const Profile = () => {
   const handleRemoveAccount = async () => {
     if (window.confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
       try {
-        // Replace with your actual API endpoint
-        // await axios.delete(`${constants.BASE_URL}/api/user/delete`, {
-        //   headers: { Authorization: `Bearer ${Cookies.get('jwtToken')}` }
-        // });
+        await axios.delete(`${config.SERVER_URL}/user/delete`, {
+          headers: { Authorization: `Bearer ${Cookies.get('jwtToken')}` }
+        });
         Cookies.remove('jwtToken');
         navigate('/');
       } catch (error) {
@@ -57,6 +70,30 @@ const Profile = () => {
       }
     }
   };
+
+  if (loading) {
+    return (
+      <div className={styles.profileContainer}>
+        <div className={styles.loading}>Loading profile...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.profileContainer}>
+        <div className={styles.error}>
+          {error}
+          <button 
+            onClick={() => window.location.reload()}
+            className={styles.retryButton}
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.profileContainer}>
@@ -66,6 +103,10 @@ const Profile = () => {
             src={user.avatar} 
             alt={user.name} 
             className={styles.profileAvatar}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = 'https://ui-avatars.com/api/?name=User&background=2ec4b6&color=fff&size=128';
+            }}
           />
           <h1 className={styles.profileTitle}>Profile</h1>
           <p className={styles.profileSubtitle}>Manage your account settings</p>

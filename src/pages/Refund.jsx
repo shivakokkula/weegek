@@ -3,28 +3,43 @@ export default function Refund(){
   return (<>
     <h2>Refund and Cancellation Policy</h2>
     <section>
-      <h3>Introduction</h3>
-      <p>Weegek is committed to delivering high-quality software products and services. This policy outlines the terms and conditions for requesting refunds and cancellations.</p>
-      <h3>Eligibility for Refunds</h3>
-      <ul>
-        <li>Refunds are considered only for digital products or services that have not been delivered or are materially different from the agreed specifications.</li>
-        <li>Requests must be submitted within 7 days of purchase or delivery, whichever is earlier.</li>
-        <li>Custom development, consulting, or support services are non-refundable once work has commenced or deliverables have been provided.</li>
-      </ul>
-      <h3>Refund Process</h3>
-      <ul>
-        <li>To request a refund, contact our support team at <a href="mailto:refunds@weegek.com">refunds@weegek.com</a> with your order details and reason for the request.</li>
-        <li>We will review your request and respond within 5 business days.</li>
-        <li>If approved, refunds will be processed to your original payment method within 7–10 business days.</li>
-      </ul>
-      <h3>Exceptions</h3>
-      <ul>
-        <li>No refunds are provided for services already rendered, including completed milestones or delivered software.</li>
-        <li>Refunds are not available for change-of-mind or dissatisfaction unrelated to product defects or non-delivery.</li>
-        <li>We reserve the right to decline refund requests that do not meet the eligibility criteria.</li>
-      </ul>
-      <h3>Contact</h3>
-      <p>If you have questions about our refund or cancellation policy, please contact us at <a href="mailto:support@weegek.com">support@weegek.com</a>.</p>
+        <p>Refund and Cancellation Policy
+Positiwise Software Pvt Ltd offers software designing, development, migration, modernization, optimization, deployment, and maintenance services. We start the project after discussing all the charges with our clients and confirming the defined advance payment. Further, below are the policies you must know to claim a refund and understand our role in the procedure.</p>
+
+        <h3>Project Cancellation</h3>
+        <p>Before canceling the project, we recommend discussing the complexities and any other queries with us. We consider a refund a last resort under scenarios with limited/no scope to move further.</p>
+
+        <p>To cancel the project at any stage, you need to provide a written application to Positiwise Software Pvt Ltd. After this, we will consider the cancellation and move forward with it per the policies defined here. You must undergo all the refund policies to understand the post-cancellation scope.</p>
+
+        <h3>Refund Coverage</h3>
+<p>Our refund policy only covers the services/assets/resources owned by Positiwise Software Pvt Ltd. The refund policy doesn’t cover and control any third-party resources, licenses, software, and applicable fees paid to them. In addition, our policy has zero scope of refund for external services availed through third-party vendors and websites for the project.</p>
+
+        <h3>We offer three primary refunds, which get initiated per the discussion and current scenario of the project.</h3>
+
+        <p>The refund categories include:</p>
+
+        <h4>Full Refund</h4>
+        <p>We provide a full refund if the project is not accepted and initiated by our team. You have to provide a written application to us for even canceling the project before initiation.</p>
+
+        <h4>Partial Refund</h4>
+        <p>A partial refund is considered in cases where some project milestones have been completed. We will deduct the amount from the advance payment accordingly, and if it exceeds that, you have to pay the remaining amount to Positiwise Software Pvt Ltd.</p>
+
+        <p>We thoroughly analyze the project before deciding, as we don't want our clients and the company to face monetary loss.</p>
+
+        <h4>No Refund</h4>
+        <p>If the project is completed or deployed on the servers, we will not provide you with any refund. Once the complete application is developed, the refund amount updates to zero by default.</p>
+
+        <h3>Refund Eligibility</h3>
+        <p>We manage every project with the utmost professionalism and ensure top-tier quality for every output. However, if you are unsatisfied at any stage, you can reach out to our business managers and even contact the company directly through the provided communication channels. We will consider client cancellation and refund requests after the dispute resolution procedure. If we don't come to a mutually satisfactory conclusion, we will approve the cancellation and refund as per the policies. According to the project stage, the client will get paid in full, partial, or no refund.</p>
+
+        <h3>Refund Processing</h3>
+        <p>Once Positiwise Software Pvt Ltd approves the cancellation, the refund gets initiated within five working days. The client receives notification about the same as it progresses. In addition, we initiate the refund to the same payment gateway or method as the original payment mode. There’s no fixed time for clients to receive payment, as we provide a 180 working days period for the amount to get settled and reflected in the client’s account.</p>
+
+        <h3>Limitation of Liability</h3>
+        <p>Positiwise Software Pvt Ltd holds only limited liability when the project is incomplete. For any other instance, such as loss due to no delivery of services or delay in delivery, Positiwise Software is not responsible. In addition, the refund is only initiated if the client cancels the project per the Cancellation and Refund Policy.</p>
+
+        <h3>Policy Updation</h3>
+        <p>Positiwise Software Pvt Ltd holds the complete right to modify the Cancellation and Refund policy at any time without providing a notice to the stakeholders. Therefore, we recommend consistently updating yourself with the policies, terms, and conditions.</p>
     </section>
-  </>);
-}
+      </>)
+    }
