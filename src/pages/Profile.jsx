@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import axios from 'axios';
-import constants from '../auth/constants';
 import styles from './Profile.module.css';
 
 const Profile = () => {
@@ -30,6 +28,7 @@ const Profile = () => {
           //   ...response.data,
           //   avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(response.data.name)}&background=2ec4b6&color=fff&size=128`
           // });
+          setUser((prevUser) => ({ ...prevUser, loggedIn: true }));
         } catch (error) {
           console.error('Error fetching user data:', error);
         }
