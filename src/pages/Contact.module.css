@@ -2,15 +2,16 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   background: #fff;
+  box-sizing: border-box;
 }
 
 .contactTitle {
   text-align: center;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 2rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #2ec4b6;
   line-height: 1.2;
 }
@@ -33,6 +34,7 @@
   background: #f9fbfd;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 .contactInfo h3 {
@@ -48,6 +50,8 @@
   margin-bottom: 1.2rem;
   color: #4a5568;
   line-height: 1.6;
+  flex-wrap: wrap;
+  word-break: break-word;
 }
 
 .contactDetail i {
@@ -61,6 +65,7 @@
   color: #2ec4b6;
   text-decoration: none;
   transition: color 0.2s ease;
+  word-break: break-all;
 }
 
 .contactDetail a:hover {
@@ -94,6 +99,7 @@
   flex: 1;
   min-width: 100%;
   margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 
 .inputLabel {
@@ -113,6 +119,7 @@
   font-size: 1rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   background-color: #f8fafc;
+  box-sizing: border-box;
 }
 
 .textareaField {
@@ -130,6 +137,7 @@
 .submitGroup {
   margin-top: 1rem;
   text-align: center;
+  width: 100%;
 }
 
 .submitBtn {
@@ -144,6 +152,7 @@
   transition: background-color 0.2s ease, transform 0.1s ease;
   width: 100%;
   max-width: 200px;
+  display: inline-block;
 }
 
 .submitBtn:hover {
@@ -182,12 +191,17 @@
 /* Responsive Styles */
 @media (min-width: 640px) {
   .contactSection {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
   }
   
   .contactTitle {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 2.5rem;
+  }
+  
+  .formRow {
+    display: flex;
+    gap: 1.5rem;
   }
   
   .inputGroup {
@@ -198,55 +212,24 @@
     margin-right: 2rem;
     margin-bottom: 0;
   }
-  
-  .contactFormContainer {
-    padding: 2rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .contactSection {
-    padding: 5rem 3rem;
-  }
-  
-  .contactContainer {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  
-  .contactInfo {
-    flex: 1;
-    margin-right: 3rem;
-    margin-bottom: 0;
-    padding: 2rem;
-  }
-  
-  .contactFormContainer {
-    flex: 2;
-    padding: 2.5rem;
-  }
-  
-  .inputGroup {
-    min-width: 100%;
-  }
 }
 
 @media (min-width: 1024px) {
   .contactSection {
-    padding: 6rem 4rem;
+    padding: 4rem 3rem;
   }
   
-  .contactTitle {
-    font-size: 2.8rem;
-    margin-bottom: 3rem;
-  }
-  
-  .formRow {
+  .contactContainer {
     display: flex;
-    gap: 1.5rem;
+    gap: 3rem;
   }
   
-  .inputGroup {
-    min-width: calc(50% - 0.75rem);
+  .contactInfo {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .contactFormContainer {
+    flex: 2;
   }
 }

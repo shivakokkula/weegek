@@ -1,6 +1,7 @@
 // index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './app.css'; // Import the common CSS file
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
