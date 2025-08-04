@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { products } from "./productsData.js";
+import { products, getProductsByCategory, categories } from "./productsData";
 import styles from './Services.module.css';
 
 export default function Products() {
-  const [productsData, setProductsData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [categorizedProducts, setCategorizedProducts] = useState({});
 
   useEffect(() => {
     try {
@@ -18,7 +18,13 @@ export default function Products() {
         throw new Error('Products data is not an array');
       }
       
-      setProductsData(products);
+      // Group products by category
+      const groupedProducts = {};
+      categories.forEach(category => {
+        groupedProducts[category] = getProductsByCategory(category);
+      });
+      
+      setCategorizedProducts(groupedProducts);
       setLoading(false);
     } catch (err) {
       console.error('Error loading products:', err);
@@ -44,24 +50,31 @@ export default function Products() {
     <section className={styles.productsSection}>
       <div className={styles.productsContainer}>
         <header className={styles.productsHeader}>
-          <h1 className={styles.productsTitle}>Our Products</h1>
-          <p className={styles.productsSubtitle}>Discover our range of innovative solutions</p>
+          <h1 className={styles.productsTitle}>Our Products & Resources</h1>
+          <p className={styles.productsSubtitle}>Discover our range of innovative solutions and resources</p>
         </header>
 
-        {productsData.length > 0 ? (
-          <div className={styles.productsGrid}>
-            {productsData.map((product, index) => (
-              <div key={index} className={styles.productCard}>
-                <h3 className={styles.productName}>{product.name}</h3>
-                <p className={styles.productDesc}>{product.desc}</p>
-                <a 
-                  href={product.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={styles.productLink}
-                >
-                  Learn More
-                </a>
+        {Object.keys(categorizedProducts).length > 0 ? (
+          <div className={styles.productsCategories}>
+            {categories.map((category) => (
+              <div key={category} className={styles.categorySection}>
+                <h2 className={styles.categoryTitle}>{category}</h2>
+                <div className={styles.productsGrid}>
+                  {categorizedProducts[category].map((product) => (
+                    <div key={product.id} className={styles.productCard}>
+                      <h3 className={styles.productName}>{product.name}</h3>
+                      <p className={styles.productDesc}>{product.desc}</p>
+                      <a 
+                        href={product.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className={styles.productLink}
+                      >
+                        {category === 'Guides' || category === 'Templates' ? 'View' : 'Learn More'}
+                      </a>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
