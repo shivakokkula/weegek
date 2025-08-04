@@ -7,7 +7,7 @@ export default function About() {
         <p style={{ fontSize: '1.15rem', color: '#333', marginBottom: '1.5rem' }}>
           Weegek is a forward-thinking software company delivering SaaS products and custom solutions. Our mission is to empower businesses with technology.
         </p>
-        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', marginBottom: '2rem', textAlign: 'center' }}>
           <div style={{ flex: 1, minWidth: 220 }}>
             <h3 style={{ marginBottom: 8 }}>Mission</h3>
             <p>To deliver innovative, reliable, and scalable software solutions that drive business growth.</p>
@@ -18,7 +18,7 @@ export default function About() {
           </div>
         </div>
           <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', marginBottom:'1rem' }}>
-            <div style={{flex: 1, minWidth: 150 }}>
+            <div style={{ flex: 1, minWidth: 150 }}>
               <img src="https://ui-avatars.com/api/?name=Shivakumar+Kokkula&background=2ec4b6&color=fff&size=128" alt="Founder" style={{ width: 72, height: 72, borderRadius: '50%', marginBottom: 8 }} />
               <div style={{ fontWeight: 600 }}>Shivakumar Kokkula</div>
               <div style={{ color: '#888' }}>Founder</div>

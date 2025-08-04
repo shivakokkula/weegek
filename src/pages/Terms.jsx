@@ -1,4 +1,3 @@
-import "./Privacy.module.css";
 
 export default function Terms() {
   return (

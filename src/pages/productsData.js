@@ -81,39 +81,39 @@ export const getProductsByCategory = (category) => {
 // Get all unique categories
 export const categories = [...new Set(products.map(product => product.category))];
 
-// SVG icons for services (used in Services page)
-export const serviceIcons = {
-  ai: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><path d="M14 27c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="#2ec4b6" strokeWidth="2.2" strokeLinecap="round"/><circle cx="20" cy="17" r="4" fill="#4f8cff"/></svg>
-  ),
-  web: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="12" y="15" width="16" height="10" rx="2" fill="#4f8cff"/><rect x="16" y="19" width="8" height="2" rx="1" fill="#fff"/></svg>
-  ),
-  mobile: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="15" y="12" width="10" height="16" rx="2" fill="#2ec4b6"/><rect x="18" y="25" width="4" height="2" rx="1" fill="#fff"/></svg>
-  ),
-  desktop: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="13" y="15" width="14" height="10" rx="2" fill="#4f8cff"/><rect x="17" y="26" width="6" height="2" rx="1" fill="#2ec4b6"/></svg>
-  ),
-  cloud: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><ellipse cx="20" cy="24" rx="8" ry="5" fill="#2ec4b6"/><ellipse cx="16" cy="22" rx="4" ry="3" fill="#4f8cff"/></svg>
-  ),
-  email: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><path d="M14 27c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="#2ec4b6" strokeWidth="2.2" strokeLinecap="round"/><circle cx="20" cy="17" r="4" fill="#4f8cff"/></svg>
-  ),
-  productivity: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="12" y="15" width="16" height="10" rx="2" fill="#4f8cff"/><rect x="16" y="19" width="8" height="2" rx="1" fill="#fff"/></svg>
-  ),
-  security: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><ellipse cx="20" cy="24" rx="8" ry="5" fill="#2ec4b6"/><ellipse cx="16" cy="22" rx="4" ry="3" fill="#4f8cff"/></svg>
-  ),
-  chart: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><path d="M14 27c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="#2ec4b6" strokeWidth="2.2" strokeLinecap="round"/><circle cx="20" cy="17" r="4" fill="#4f8cff"/></svg>
-  ),
-  chat: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="15" y="12" width="10" height="16" rx="2" fill="#2ec4b6"/><rect x="18" y="25" width="4" height="2" rx="1" fill="#fff"/></svg>
-  ),
-  storage: (
-    <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="13" y="15" width="14" height="10" rx="2" fill="#4f8cff"/><rect x="17" y="26" width="6" height="2" rx="1" fill="#2ec4b6"/></svg>
-  )
-};
+// // SVG icons for services (used in Services page)
+// export const serviceIcons = {
+//   ai: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><path d="M14 27c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="#2ec4b6" strokeWidth="2.2" strokeLinecap="round"/><circle cx="20" cy="17" r="4" fill="#4f8cff"/></svg>
+//   ),
+//   web: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="12" y="15" width="16" height="10" rx="2" fill="#4f8cff"/><rect x="16" y="19" width="8" height="2" rx="1" fill="#fff"/></svg>
+//   ),
+//   mobile: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="15" y="12" width="10" height="16" rx="2" fill="#2ec4b6"/><rect x="18" y="25" width="4" height="2" rx="1" fill="#fff"/></svg>
+//   ),
+//   desktop: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="13" y="15" width="14" height="10" rx="2" fill="#4f8cff"/><rect x="17" y="26" width="6" height="2" rx="1" fill="#2ec4b6"/></svg>
+//   ),
+//   cloud: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><ellipse cx="20" cy="24" rx="8" ry="5" fill="#2ec4b6"/><ellipse cx="16" cy="22" rx="4" ry="3" fill="#4f8cff"/></svg>
+//   ),
+//   email: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><path d="M14 27c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="#2ec4b6" strokeWidth="2.2" strokeLinecap="round"/><circle cx="20" cy="17" r="4" fill="#4f8cff"/></svg>
+//   ),
+//   productivity: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="12" y="15" width="16" height="10" rx="2" fill="#4f8cff"/><rect x="16" y="19" width="8" height="2" rx="1" fill="#fff"/></svg>
+//   ),
+//   security: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><ellipse cx="20" cy="24" rx="8" ry="5" fill="#2ec4b6"/><ellipse cx="16" cy="22" rx="4" ry="3" fill="#4f8cff"/></svg>
+//   ),
+//   chart: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><path d="M14 27c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="#2ec4b6" strokeWidth="2.2" strokeLinecap="round"/><circle cx="20" cy="17" r="4" fill="#4f8cff"/></svg>
+//   ),
+//   chat: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="15" y="12" width="10" height="16" rx="2" fill="#2ec4b6"/><rect x="18" y="25" width="4" height="2" rx="1" fill="#fff"/></svg>
+//   ),
+//   storage: (
+//     <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#e3f6f5"/><rect x="13" y="15" width="14" height="10" rx="2" fill="#4f8cff"/><rect x="17" y="26" width="6" height="2" rx="1" fill="#2ec4b6"/></svg>
+//   )
+// };

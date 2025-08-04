@@ -1,10 +1,7 @@
-
 import styles from './Services.module.css';
-import { serviceIcons } from './productsData';
 
 const services = [
   {
-    icon: serviceIcons.ai,
     title: 'AI Agent Development',
     subtitle: 'Custom AI agents and autonomous systems powered by cutting-edge LLMs',
     features: [
@@ -16,7 +13,6 @@ const services = [
     link: '/contact',
   },
   {
-    icon: serviceIcons.web,
     title: 'Web Development',
     subtitle: 'Custom web applications built with cutting-edge technologies and modern frameworks',
     features: [
@@ -28,7 +24,6 @@ const services = [
     link: '/contact',
   },
   {
-    icon: serviceIcons.mobile,
     title: 'Mobile Development',
     subtitle: 'Native and cross-platform mobile applications for iOS and Android',
     features: [
@@ -40,7 +35,6 @@ const services = [
     link: '/contact',
   },
   {
-    icon: serviceIcons.desktop,
     title: 'Desktop Development',
     subtitle: 'Powerful desktop applications for Windows, macOS, and Linux',
     features: [
@@ -52,7 +46,6 @@ const services = [
     link: '/contact',
   },
   {
-    icon: serviceIcons.cloud,
     title: 'Cloud Services',
     subtitle: 'Scalable cloud solutions and infrastructure management',
     features: [
@@ -64,7 +57,6 @@ const services = [
     link: '/contact',
   },
   {
-    icon: serviceIcons.automation,
     title: 'Automations',
     subtitle: 'Intelligent automation solutions to streamline your workflows',
     features: [
@@ -79,33 +71,31 @@ const services = [
 
 export default function Services() {
   return (
-    <>
-
-
-      {/* Services Section */}
-      <section className={styles.servicesSection}>
-        <div className={styles.visionHeader}>
-          <h2 className={styles.visionTitle}>Our Vision, Your Success</h2>
-          <div className={styles.visionDesc}>
-            Weegek builds world-class digital products and custom solutions for ambitious businesses. Our expertise spans AI, web, mobile, desktop, cloud, and automation—empowering you to achieve more.
+    <section className={styles.servicesSection}>
+      <div className={styles.visionHeader}>
+        <h2 className={styles.visionTitle}>Our Vision, Your Success</h2>
+        <div className={styles.visionDesc}>
+          Weegek builds world-class digital products and custom solutions for ambitious businesses. Our expertise spans AI, web, mobile, desktop, cloud, and automation—empowering you to achieve more.
+        </div>
+      </div>
+      <div className={styles.servicesGrid}>
+        {services.map((service, index) => (
+          <div key={index} className={styles.serviceCard}>
+            <h3 className={styles.serviceTitle}>{service.title}</h3>
+            <p className={styles.serviceSubtitle}>{service.subtitle}</p>
+            <ul className={styles.featureList}>
+              {service.features.map((feature, idx) => (
+                <li key={idx} className={styles.featureItem}>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <a href={service.link} className={styles.learnMore}>
+              Learn More
+            </a>
           </div>
-        </div>
-        <div className={styles.servicesGrid}>
-          {services.map((s, idx) => (
-            <div key={s.title} className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>{s.icon}</div>
-              <div className={styles.serviceTitle}>{s.title}</div>
-              <div className={styles.serviceSubtitle}>{s.subtitle}</div>
-              <ul className={styles.featureList}>
-                {s.features.map(f => (
-                  <li key={f} className={styles.featureItem}>{f}</li>
-                ))}
-              </ul>
-              <a href={s.link} className={styles.learnMore}>Learn More &rarr;</a>
-            </div>
-          ))}
-        </div>
-      </section>
-    </>
+        ))}
+      </div>
+    </section>
   );
 }

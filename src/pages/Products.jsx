@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { products } from "./productsData.js";
-import ProductIcon from '../components/icons/ProductIcon';
 import styles from './Services.module.css';
 
 export default function Products() {
@@ -10,8 +9,6 @@ export default function Products() {
 
   useEffect(() => {
     try {
-      console.log('Products data from import:', products);
-      
       // Verify products data
       if (!products) {
         throw new Error('Products data is undefined');
@@ -19,10 +16,6 @@ export default function Products() {
       
       if (!Array.isArray(products)) {
         throw new Error('Products data is not an array');
-      }
-      
-      if (products.length === 0) {
-        console.warn('Products array is empty');
       }
       
       setProductsData(products);
@@ -43,14 +36,6 @@ export default function Products() {
       <div className={styles.productsSection}>
         <h2>Error Loading Products</h2>
         <p>{error}</p>
-        <div className={styles.debugInfo}>
-          <h4>Debug Information:</h4>
-          <pre>{JSON.stringify({
-            productsType: typeof products,
-            productsLength: Array.isArray(products) ? products.length : 'N/A',
-            productsSample: Array.isArray(products) && products.length > 0 ? products[0] : 'No products'
-          }, null, 2)}</pre>
-        </div>
       </div>
     );
   }
@@ -67,12 +52,6 @@ export default function Products() {
           <div className={styles.productsGrid}>
             {productsData.map((product, index) => (
               <div key={index} className={styles.productCard}>
-                <div className={styles.productIcon}>
-                  <ProductIcon 
-                    type={product.iconType || 'default'} 
-                    className={styles.icon}
-                  />
-                </div>
                 <h3 className={styles.productName}>{product.name}</h3>
                 <p className={styles.productDesc}>{product.desc}</p>
                 <a 
@@ -81,7 +60,7 @@ export default function Products() {
                   rel="noopener noreferrer"
                   className={styles.productLink}
                 >
-                  Learn More →
+                  Learn More
                 </a>
               </div>
             ))}
