@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { products } from "./productsData.js";
 import ProductIcon from '../components/icons/ProductIcon';
-import styles from './Products.module.css';
+import styles from './Services.module.css';
 
 export default function Products() {
   const [productsData, setProductsData] = useState([]);

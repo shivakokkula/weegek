@@ -2,15 +2,15 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
   background: #fff;
 }
 
 .contactTitle {
   text-align: center;
   font-weight: 800;
-  margin-bottom: 3rem;
-  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
   color: #2ec4b6;
   line-height: 1.2;
 }
@@ -28,6 +28,11 @@
   flex: 1;
   min-width: 300px;
   padding-right: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f9fbfd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .contactInfo h3 {
@@ -40,7 +45,7 @@
 .contactDetail {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   color: #4a5568;
   line-height: 1.6;
 }
@@ -63,7 +68,6 @@
   text-decoration: underline;
 }
 
-/* Contact Form */
 .contactFormContainer {
   flex: 2;
   min-width: 300px;
@@ -77,6 +81,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  max-width: 100%;
 }
 
 .formRow {
@@ -87,7 +92,8 @@
 
 .inputGroup {
   flex: 1;
-  min-width: 250px;
+  min-width: 100%;
+  margin-bottom: 1rem;
 }
 
 .inputLabel {
@@ -98,35 +104,23 @@
   font-size: 0.95rem;
 }
 
-.inputField {
+.inputField,
+.textareaField {
   width: 100%;
-  padding: 0.9rem 1.2rem;
+  padding: 0.8rem 1rem;
   border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 1rem;
-  transition: all 0.2s ease;
-  background: #fff;
-}
-
-.inputField:focus {
-  outline: none;
-  border-color: #2ec4b6;
-  box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.1);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #f8fafc;
 }
 
 .textareaField {
-  width: 100%;
-  min-height: 150px;
-  padding: 1rem 1.2rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
+  min-height: 120px;
   resize: vertical;
-  transition: all 0.2s ease;
-  background: #fff;
 }
 
+.inputField:focus,
 .textareaField:focus {
   outline: none;
   border-color: #2ec4b6;
@@ -135,29 +129,29 @@
 
 .submitGroup {
   margin-top: 1rem;
-  text-align: right;
+  text-align: center;
 }
 
 .submitBtn {
-  background: linear-gradient(90deg, #2ec4b6 0%, #4f8cff 100%);
+  background-color: #2ec4b6;
   color: white;
   border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1.05rem;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
   font-weight: 600;
-  border-radius: 50px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(46, 196, 182, 0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 100%;
+  max-width: 200px;
 }
 
 .submitBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(46, 196, 182, 0.3);
+  background-color: #24a79d;
 }
 
 .submitBtn:active {
-  transform: translateY(0);
+  transform: translateY(1px);
 }
 
 .successMessage {
@@ -176,62 +170,83 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .contactContainer {
-    gap: 3rem;
-    padding: 0 1.5rem;
-  }
-  
-  .contactInfo {
-    padding-right: 0;
-  }
+.inputGroup {
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
-@media (max-width: 768px) {
+.inputGroup:nth-child(1) { animation-delay: 0.1s; }
+.inputGroup:nth-child(2) { animation-delay: 0.2s; }
+.inputGroup:nth-child(3) { animation-delay: 0.3s; }
+.submitGroup { animation: fadeIn 0.4s 0.4s ease-out both; }
+
+/* Responsive Styles */
+@media (min-width: 640px) {
   .contactSection {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
   }
   
   .contactTitle {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 2.5rem;
   }
   
-  .contactContainer {
-    flex-direction: column;
-    gap: 2.5rem;
-    padding: 0 1rem;
+  .inputGroup {
+    min-width: calc(50% - 0.75rem);
+  }
+  
+  .contactInfo {
+    margin-right: 2rem;
+    margin-bottom: 0;
   }
   
   .contactFormContainer {
     padding: 2rem;
   }
-  
-  .submitGroup {
-    text-align: center;
-  }
-  
-  .submitBtn {
-    width: 100%;
-    max-width: 300px;
-  }
 }
 
-@media (max-width: 480px) {
-  .contactTitle {
-    font-size: 1.8rem;
+@media (min-width: 768px) {
+  .contactSection {
+    padding: 5rem 3rem;
+  }
+  
+  .contactContainer {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .contactInfo {
+    flex: 1;
+    margin-right: 3rem;
+    margin-bottom: 0;
+    padding: 2rem;
   }
   
   .contactFormContainer {
-    padding: 1.5rem;
-  }
-  
-  .formRow {
-    gap: 1rem;
+    flex: 2;
+    padding: 2.5rem;
   }
   
   .inputGroup {
     min-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contactSection {
+    padding: 6rem 4rem;
+  }
+  
+  .contactTitle {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+  }
+  
+  .formRow {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .inputGroup {
+    min-width: calc(50% - 0.75rem);
   }
 }

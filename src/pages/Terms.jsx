@@ -2,8 +2,8 @@ import "./Privacy.module.css";
 
 export default function Terms() {
   return (
-    <div>
-      <h1>Terms and Conditions</h1>
+    <section>
+      <h2>Terms and Conditions</h2>
       <p>Last Updated: August 4, 2025</p>
       <div>
         <p>
@@ -14,7 +14,7 @@ export default function Terms() {
       </div>
 
       <div>
-        <h2>1. Definitions</h2>
+        <h3>1. Definitions</h3>
         <p>
           In these Terms, unless the context otherwise requires, the following
           expressions have the following meanings:
@@ -41,7 +41,7 @@ export default function Terms() {
       </div>
 
       <div>
-        <h2>2. Account Terms</h2>
+        <h3>2. Account Terms</h3>
         <h3>2.1 Access to Services</h3>
         <p>
           We provide our services online. You are responsible for providing and
@@ -57,7 +57,7 @@ export default function Terms() {
       </div>
 
       <div>
-        <h2>3. Acceptable Use</h2>
+        <h3>3. Acceptable Use</h3>
         <p>
           You agree to use our services in compliance with all applicable laws
           and regulations. You must not:
@@ -79,7 +79,7 @@ export default function Terms() {
       </div>
 
       <div>
-        <h2>4. Intellectual Property</h2>
+        <h3>4. Intellectual Property</h3>
         <p>
           All content included on our website, such as text, graphics, logos,
           and software, is our property or the property of our licensors and is
@@ -88,7 +88,7 @@ export default function Terms() {
       </div>
 
       <div>
-        <h2>5. Limitation of Liability</h2>
+        <h3>5. Limitation of Liability</h3>
         <p>
           To the maximum extent permitted by law, we shall not be liable for any
           indirect, incidental, special, consequential, or punitive damages, or
@@ -98,7 +98,7 @@ export default function Terms() {
       </div>
 
       <div>
-        <h2>6. Changes to Terms</h2>
+        <h3>6. Changes to Terms</h3>
         <p>
           We reserve the right to modify these terms at any time. We will
           provide notice of any changes by updating the "Last Updated" date at
@@ -107,7 +107,7 @@ export default function Terms() {
       </div>
 
       <div>
-        <h2>7. Contact Us</h2>
+        <h3>7. Contact Us</h3>
         <p>
           If you have any questions about these Terms, please contact us at{" "}
           <a href="mailto:kokkulashivakumar1@gmail.com">
@@ -513,6 +513,6 @@ export default function Terms() {
         </li>
         <li>Software's violation of any law, rule, or regulation</li>
       </ul>
-    </div>
+    </section>
   );
 }

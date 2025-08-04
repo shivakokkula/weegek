@@ -95,7 +95,7 @@ export default function Privacy(){
 
       <p>We do not intentionally collect sensitive personal information, such as personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation. If you choose to store any sensitive personal information on our servers, you are responsible for complying with any regulatory controls regarding that data.</p>
 
-      <h3>      If you are a child under the age of 16, you may not use our Services. Software does not knowingly collect information from or direct any of our content specifically to children under 16. If we learn or have reason to suspect that you are a User who is under the age of 16, we will have to terminate your use of our Services. Different countries may have different minimum age limits, and if you are below the minimum age for providing consent for data collection in your country, you may not use our Services.</h3>
+      <h4>      If you are a child under the age of 16, you may not use our Services. Software does not knowingly collect information from or direct any of our content specifically to children under 16. If we learn or have reason to suspect that you are a User who is under the age of 16, we will have to terminate your use of our Services. Different countries may have different minimum age limits, and if you are below the minimum age for providing consent for data collection in your country, you may not use our Services.</h4>
 
       <h3>How we use your information</h3>
 
